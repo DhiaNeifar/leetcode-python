@@ -28,8 +28,7 @@ def main(nums):
         results.append(nums[j])
         i += 1
         j += 1
-    print(results)
-
+    return results
 
 if __name__ == '__main__':
     _nums = [3, 1, -2, -5, 2, -4]
