@@ -30,6 +30,7 @@ def main(nums):
         j += 1
     return results
 
+
 if __name__ == '__main__':
     _nums = [3, 1, -2, -5, 2, -4]
     main(_nums)
