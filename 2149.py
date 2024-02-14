@@ -1,4 +1,5 @@
-def main(nums):
+def main1(nums):
+    # Basic 2 loops
     positive, negative = [], []
     for num in nums:
         if num > 0:
@@ -12,6 +13,22 @@ def main(nums):
         results.append(negative[i])
         i += 1
     return results
+
+
+def main(nums):
+    # 1 loop
+    results = []
+    i, j = 0, 0
+    while i < len(nums) and j < len(nums):
+        while nums[i] < 0:
+            i += 1
+        while nums[j] > 0:
+            j += 1
+        results.append(nums[i])
+        results.append(nums[j])
+        i += 1
+        j += 1
+    print(results)
 
 
 if __name__ == '__main__':
