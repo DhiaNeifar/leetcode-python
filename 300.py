@@ -6,8 +6,6 @@ def main(nums):
             if nums[i] < nums[j]:
                 count[j] = max(count[j], count[i] + 1)
                 _max = max(_max, count[j])
-    print(_max)
-    print(count)
     return count
 
 

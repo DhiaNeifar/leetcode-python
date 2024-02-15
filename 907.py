@@ -1,20 +1,17 @@
 def main(arr):
-    def sum_sub_array_min(_list):
-        if len(_list) == 0:
-            return 0
-        if len(_list) == 1:
-            return _list[0]
-        pos, _min = 0, _list[0]
-        i = 1
-        while i < len(_list):
-            if _list[i] < _min:
-                _min = _list[i]
-                pos = i
-            i += 1
-        return _min * ((pos + 1) * (len(_list) - pos)) + sum_sub_array_min(_list[:pos]) + sum_sub_array_min(_list[pos + 1:])
-    return sum_sub_array_min(arr)
+    # Execution Time Exceeded
+    constant = 10 ** 9 + 7
+    count = 0
+    for i in range(len(arr)):
+        i_min, i_max = i, i
+        while i_min - 1 >= 0 and arr[i_min - 1] > arr[i]:
+            i_min -= 1
+        while i_max + 1 <= len(arr) - 1 and arr[i_max + 1] >= arr[i]:
+            i_max += 1
+        count += arr[i] * (i - i_min + 1) * (i_max - i + 1)
+    return count % constant
 
 
 if __name__ == '__main__':
-    _arr = [3, 1, 2, 4]
+    _arr = [71, 55, 82, 55]
     print(main(_arr))
