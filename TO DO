@@ -3,5 +3,6 @@
 2385    -   Medium  - Amount of Time for Binary Tree to Be Infected
 1026    -   Medium  - Maximum Difference Between Node and Ancestor
 1657    -   Medium  - Determine if Two Strings Are Close
-
-907 | 1239 | 931 | 1657
+1642    -   Medium  - Furthest Building You Can Reach   - Tried Recursion but Execution Time Exceeded.
+1752    -   Easy    - Not solved yet.
+907 | 1239 | 931 | 1657 | 1642
