@@ -1,17 +1,12 @@
 def main(nums):
-    if len(nums) == 1:
-        return True
-    max_index, max_ = 0, nums[0]
-    for index, num in enumerate(nums):
-        if max_ <= num:
-            max_ = num
-            max_index = index
-    for index in range(max_index + 1, max_index + len(nums)):
-        if nums[index % len(nums)] > nums[(index + 1) % len(nums)]:
-            return False
-    return True
+    huh = 0
+    for i in range(-1, len(nums) - 1):
+        if nums[i] > nums[i + 1]:
+            huh += 1
+    return not huh > 1
+
 
 
 if __name__ == '__main__':
-    _nums = [1, 2, 3]
+    _nums = [3,4,5,1,2]
     print(main(_nums))
