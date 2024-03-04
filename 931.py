@@ -1,23 +1,13 @@
 def main(matrix):
-    def min_falling_path_sum(position_, matrix_):
-        if position_[0] == len(matrix) - 1:
-            return matrix_[position_[0]][position_[1]]
-        else:
-            if position_[1] == 0:
-                return matrix_[position_[0]][position_[1]] + min(
-                    min_falling_path_sum((position_[0] + 1, position_[1]), matrix_),
-                    min_falling_path_sum((position_[0] + 1, position_[1] + 1), matrix_))
-            return matrix_[position_[0]][position_[1]] + min(
-                min_falling_path_sum((position_[0] + 1, position_[1] - 1), matrix_),
-                min_falling_path_sum((position_[0] + 1, position_[1]), matrix_),
-                min_falling_path_sum((position_[0] + 1, position_[1] + 1), matrix_))
-
-    if len(matrix) == 1:
-        return matrix[0][0]
-    _min = -100 * len(matrix)
-    for j in range(len(matrix[0])):
-        _min = min(_min, min_falling_path_sum((0, j), matrix))
-    return _min
+    n = len(matrix)
+    for i in range(1, n):
+        for j in range(n):
+            first_index = max(0, j - 1)
+            min_value = matrix[i - 1][first_index]
+            for t in range(first_index + 1, min(j + 2, n)):
+                min_value = min(min_value, matrix[i - 1][t])
+            matrix[i][j] += min_value
+    return min(matrix[n - 1])
 
 
 if __name__ == '__main__':
