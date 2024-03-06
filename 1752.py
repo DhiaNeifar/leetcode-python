@@ -8,5 +8,5 @@ def main(nums):
 
 
 if __name__ == '__main__':
-    _nums = [3,4,5,1,2]
+    _nums = [3, 4, 5, 1, 2]
     print(main(_nums))
