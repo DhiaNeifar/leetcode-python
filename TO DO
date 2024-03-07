@@ -5,4 +5,8 @@
 1657    -   Medium  - Determine if Two Strings Are Close
 1642    -   Medium  - Furthest Building You Can Reach   - Tried Recursion but Execution Time Exceeded.
 189     -   Easy    - Rotate Array
+136     -   Easy    - Single Number (Bit Manipulation)
+287     -   Medium  - Find the Duplicate Number (Bit Manipulation)
+268     -   Easy    - Missing Number (Bit Manipulation)
+
 907 | 1239 | 931 | 1657 | 1642 | 168
