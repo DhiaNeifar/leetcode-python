@@ -4,14 +4,15 @@
 1026    -   Medium  - Maximum Difference Between Node and Ancestor
 1642    -   Medium  - Furthest Building You Can Reach   - Tried Recursion but Execution Time Exceeded.
 287     -   Medium  - Find the Duplicate Number (Bit Manipulation)
-
-
+713     -   Medium  - Subarray Product Less Than K
+2279    -   Medium  - Number of Ways to Split Array
 
 
 907 | 1239 | 1657 | 1642
 
 
 TO Redo
-
-260     -   Medium  - Single Number III
 1863    -   Easy    - Missing a bit manipulation solution to understand
+
+Solved
+260     -   Medium  - Single Number III
